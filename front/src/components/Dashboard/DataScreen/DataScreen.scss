@@ -1,0 +1,8 @@
+.datascreen-main-box {
+  --clr-main-window-background: hsl(213, 48%, 95%);
+
+  height: 100%;
+  width: auto;
+  z-index: 2;
+  background-color: var(--clr-main-window-background);
+}
