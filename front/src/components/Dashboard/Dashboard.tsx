@@ -6,8 +6,8 @@ import DataScreen from "./DataScreen/DataScreen";
 const Dashboard = () => {
   return (
     <div className="dashboard-main-box">
-      <DataScreen />
       <Toolbar />
+      <DataScreen />
     </div>
   );
 };

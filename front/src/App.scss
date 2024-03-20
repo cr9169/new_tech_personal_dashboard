@@ -25,12 +25,20 @@ body {
 html {
   /* clr - color, fs - font size, ff - font family, fw - font weight */
 
-  --clr-main-background: hsl(246, 69%, 91%);
-  --clr-main-window-background: hsl(213, 48%, 95%);
-  --clr-toolbar-background: hsl(249, 73%, 93%);
+  --clr-gradient-main-background-start: hsl(244, 66%, 91%);
+  --clr-gradient-main-background-middle: hsl(306, 23%, 91%);
+  --clr-gradient-main-background-end: hsl(207, 27%, 94%);
+
+  --clr-gradient-main-window-background-start: hsl(213, 48%, 95%);
+  --clr-gradient-main-window-background-end: hsl(327, 43%, 96%);
+
+  --clr-gradient-toolbar-background-start: hsl(249, 73%, 93%);
+  --clr-gradient-toolbar-background-end: hsl(318, 42%, 94%);
+
   --clr-regular-cards-background: hsl(0, 0%, 99%);
-  --clr-gradiant-cards-dark-background: hsl(273, 66%, 48%);
-  --clr-gradiant-cards-bright-background: hsl(336, 100%, 72%);
+
+  --clr-gradient-cards-dark-background: hsl(273, 66%, 48%);
+  --clr-gradient-cards-bright-background: hsl(336, 100%, 72%);
 
   --clr-special-buttons-color: hsl(263, 49%, 85%);
 
@@ -61,7 +69,13 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--clr-main-background);
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-gradient-main-background-start),
+    var(--clr-gradient-main-background-middle),
+    var(--clr-gradient-main-background-end)
+  );
+  // background-color: var(--clr-dark-font);
 }
 
 img,

@@ -11,13 +11,46 @@ import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
 const Toolbar = () => {
   return (
     <div className="toolbar-main-box">
-      <AppSettingsAltRoundedIcon />
-      <CalendarMonthRoundedIcon />
-      <GroupsRoundedIcon />
-      <WcRoundedIcon />
-      <AccountBalanceRoundedIcon />
-      <CurrencyBitcoinRoundedIcon />
-      <RestaurantRoundedIcon />
+      <div className="avatar"></div>
+      <button>
+        <AppSettingsAltRoundedIcon
+          className="component-icon"
+          sx={{ fontSize: "2rem" }}
+        />
+      </button>
+      <button>
+        <CalendarMonthRoundedIcon
+          className="component-icon"
+          sx={{ fontSize: "2rem" }}
+        />
+      </button>
+      <button>
+        <GroupsRoundedIcon
+          className="component-icon"
+          sx={{ fontSize: "2rem" }}
+        />
+      </button>
+      <button>
+        <WcRoundedIcon className="component-icon" sx={{ fontSize: "2rem" }} />
+      </button>
+      <button>
+        <AccountBalanceRoundedIcon
+          className="component-icon"
+          sx={{ fontSize: "2rem" }}
+        />
+      </button>
+      <button>
+        <CurrencyBitcoinRoundedIcon
+          className="component-icon"
+          sx={{ fontSize: "2rem" }}
+        />
+      </button>
+      <button>
+        <RestaurantRoundedIcon
+          className="component-icon"
+          sx={{ fontSize: "2rem" }}
+        />
+      </button>
     </div>
   );
 };

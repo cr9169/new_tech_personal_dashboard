@@ -1,8 +1,15 @@
 .dashboard-main-box {
+  --clr-gradient-toolbar-background-start: hsl(249, 73%, 93%);
+  --clr-gradient-toolbar-background-end: hsl(318, 42%, 94%);
+
   height: 90%;
   width: 80%;
   display: flex;
-  background-color: var(--clr-main-window-background);
+  flex-direction: row;
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-gradient-toolbar-background-start),
+    var(--clr-gradient-toolbar-background-end)
+  );
   border-radius: 0.75rem;
-  z-index: 2;
 }
