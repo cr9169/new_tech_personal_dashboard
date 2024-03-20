@@ -71,6 +71,8 @@ body {
   -webkit-font-smoothing: antialiased;
   background-image: linear-gradient(
     to bottom,
+    var(--clr-gradient-main-background-end),
+    var(--clr-gradient-main-background-middle),
     var(--clr-gradient-main-background-start),
     var(--clr-gradient-main-background-middle),
     var(--clr-gradient-main-background-end)
