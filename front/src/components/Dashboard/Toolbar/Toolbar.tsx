@@ -13,15 +13,8 @@ const Toolbar = () => {
   return (
     <div className="toolbar-main-box">
       <div className="avatar"></div>
-
-      <button
-        style={{
-          backgroundColor: "transparent",
-        }}
-      ></button>
-
       <button className="component-icon">
-        <AppSettingsAltRoundedIcon />
+        <AppSettingsAltRoundedIcon sx={{ fontSize: "2rem" }} />
       </button>
       <button className="component-icon">
         <CalendarMonthRoundedIcon sx={{ fontSize: "2rem" }} />
