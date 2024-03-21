@@ -1,7 +1,7 @@
 # DataScreen components:
 
     ### social media followers (editable by clicking)
-    ### calander
+    ### calendar
     ### page visits
     ### gender card
     ### bank balance (in USD and EURO)
