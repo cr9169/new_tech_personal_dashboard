@@ -1,38 +1,55 @@
 import "./Toolbar.scss";
-import React from "react";
-import AppSettingsAltRoundedIcon from "@mui/icons-material/AppSettingsAltRounded";
-import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
-import GroupsRoundedIcon from "@mui/icons-material/GroupsRounded";
-import WcRoundedIcon from "@mui/icons-material/WcRounded";
-import AccountBalanceRoundedIcon from "@mui/icons-material/AccountBalanceRounded";
-import CurrencyBitcoinRoundedIcon from "@mui/icons-material/CurrencyBitcoinRounded";
-import RestaurantRoundedIcon from "@mui/icons-material/RestaurantRounded";
+import { useState } from "react";
+import {
+  AppSettingsAltRounded,
+  CalendarMonthRounded,
+  GroupsRounded,
+  WcRounded,
+  AccountBalanceRounded,
+  CurrencyBitcoinRounded,
+  RestaurantRounded,
+  AppsRounded, // Assuming AppsIcon is actually AppsRounded based on pattern
+} from "@mui/icons-material";
 
 const Toolbar = () => {
+  const [chosenComponent, setChoseComponent] = useState("apps-icon");
+
+  const handleComponentClick = (className: string) =>
+    setChoseComponent(className);
+
+  const iconComponents = [
+    { className: "apps-icon", Icon: AppsRounded },
+    { className: "social-media-icon", Icon: AppSettingsAltRounded },
+    { className: "calendar-icon", Icon: CalendarMonthRounded },
+    { className: "visits-icon", Icon: GroupsRounded },
+    { className: "gender-icon", Icon: WcRounded },
+    { className: "bank-icon", Icon: AccountBalanceRounded },
+    { className: "crypto-icon", Icon: CurrencyBitcoinRounded },
+    { className: "weekly-nutrition-icon", Icon: RestaurantRounded },
+  ];
+
+  const getIconStyle = (className: string) => ({
+    width: "2.75rem",
+    height: "2.75rem",
+    backgroundColor: chosenComponent === className ? "white" : "transparent",
+    borderRadius: "50%",
+    border: `0.4rem solid ${
+      chosenComponent === className ? "white" : "transparent"
+    }`,
+  });
+
   return (
     <div className="toolbar-main-box">
       <div className="avatar"></div>
-      <button className="component-icon">
-        <AppSettingsAltRoundedIcon sx={{ fontSize: "2rem" }} />
-      </button>
-      <button className="component-icon">
-        <CalendarMonthRoundedIcon sx={{ fontSize: "2rem" }} />
-      </button>
-      <button>
-        <GroupsRoundedIcon sx={{ fontSize: "2rem" }} />
-      </button>
-      <button className="component-icon">
-        <WcRoundedIcon className="component-icon" sx={{ fontSize: "2rem" }} />
-      </button>
-      <button className="component-icon">
-        <AccountBalanceRoundedIcon sx={{ fontSize: "2rem" }} />
-      </button>
-      <button className="component-icon">
-        <CurrencyBitcoinRoundedIcon sx={{ fontSize: "2rem" }} />
-      </button>
-      <button className="component-icon">
-        <RestaurantRoundedIcon sx={{ fontSize: "2rem" }} />
-      </button>
+      {iconComponents.map(({ className, Icon }) => (
+        <button
+          key={className}
+          className={className}
+          onClick={() => handleComponentClick(className)}
+        >
+          <Icon sx={getIconStyle(className)} />
+        </button>
+      ))}
     </div>
   );
 };
