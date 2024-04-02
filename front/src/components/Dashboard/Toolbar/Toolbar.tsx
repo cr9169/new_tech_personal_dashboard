@@ -29,8 +29,8 @@ const Toolbar = () => {
   ];
 
   const getIconStyle = (className: string) => ({
-    width: "2.75rem",
-    height: "2.75rem",
+    width: "2.5rem",
+    height: "2.5rem",
     backgroundColor: chosenComponent === className ? "white" : "transparent",
     borderRadius: "50%",
     border: `0.4rem solid ${
