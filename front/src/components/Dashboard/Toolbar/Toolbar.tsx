@@ -40,7 +40,9 @@ const Toolbar = () => {
 
   return (
     <div className="toolbar-main-box">
-      <div className="avatar"></div>
+      <div className="avatar-wrap">
+        <div className="avatar"></div>
+      </div>
       {iconComponents.map(({ className, Icon }) => (
         <button
           key={className}

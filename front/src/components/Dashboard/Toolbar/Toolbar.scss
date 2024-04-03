@@ -1,5 +1,7 @@
 .toolbar-main-box {
+  position: relative;
   height: 100%;
+  z-index: 1;
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
@@ -8,16 +10,62 @@
   border-radius: 0.75rem;
 }
 
+.avatar-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 4rem;
+  aspect-ratio: 1;
+  margin-bottom: 2rem;
+
+  border-radius: 100%;
+}
+
+.avatar-wrap::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: 0;
+  border-radius: 100%;
+
+  background: linear-gradient(
+    #4cd964,
+    #5ac8fa,
+    #007aff,
+    #7dc8e8,
+    #5856d6,
+    #ff2d55
+  );
+
+  opacity: 0;
+  transition: opacity 1s;
+
+  animation: rotate 4s linear infinite;
+  filter: saturate(2) blur(0.5rem);
+}
+
+.toolbar-main-box:hover .avatar-wrap::after {
+  opacity: 1;
+  animation-play-state: running;
+}
+
 .avatar {
   background-image: url("../../../assets/avatar.png");
   width: 4rem;
-  height: 4rem;
+  aspect-ratio: 1;
   border: 0.15rem solid white;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: transparent;
   background-size: cover;
   background-position: center;
-  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  to {
+    rotate: 360deg;
+  }
 }
 
 button {
