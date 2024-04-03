@@ -1,11 +1,13 @@
 import React from "react";
 import "./DataScreen.scss";
+import ComponentsSection from "./ComponentsSection/ComponentsSection";
+import NotesSection from "./NotesSection/NotesSection";
 
 const DataScreen = () => {
   return (
     <div className="data-screen-main-box">
-      <div className="data-section-main-box">hiiiiiiiii</div>
-      <div className="timeline-section-main-box">hiiiiiiiiii</div>
+      <ComponentsSection />
+      <NotesSection />
     </div>
   );
 };
