@@ -6,6 +6,7 @@ import { faThumbtack } from "@fortawesome/free-solid-svg-icons";
 // TODO:
 // 1. set max words in a note (in order for the notes not to grow)
 // 2. remove background from is editable (ot change to an invisible input (same yellow background color but without border))
+// 3. drop to different component (every - <li></li>)
 
 const NotesSection = () => {
   const initialTasks = [
