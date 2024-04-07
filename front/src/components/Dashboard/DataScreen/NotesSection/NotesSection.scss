@@ -1,9 +1,9 @@
 .notes-section-main-box {
-  --clr-timeline-section-background: hsl(228, 45%, 98%);
+  --clr-notes-section-background: hsl(228, 45%, 98%);
 
   height: 100%;
   width: 30%;
-  background-color: var(--clr-timeline-section-background);
+  background-color: var(--clr-notes-section-background);
 }
 
 .notes-board {
@@ -69,16 +69,25 @@
 }
 
 .task-pin {
+  height: 1rem;
+  aspect-ratio: 1;
   position: absolute;
   color: #d93e17;
   left: 1rem;
   top: 1rem;
 }
 
-.notes-board p {
-  height: 90%;
-  width: 100%;
+.notes-board textarea {
+  --clr-notes-background: hsl(56, 100%, 90%);
+
+  height: calc(100% - 2rem);
+  width: 90%;
   position: absolute;
+  background-color: transparent;
   top: 2rem;
-  padding: 1rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  border: none;
+  outline: none;
+  overflow: hidden;
 }

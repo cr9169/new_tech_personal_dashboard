@@ -5,7 +5,7 @@ import { faThumbtack } from "@fortawesome/free-solid-svg-icons";
 
 // TODO:
 // 1. set max words in a note (in order for the notes not to grow)
-// 2. remove background from is editable (ot change to an invisible input (same yellow background color but without border))
+// 2. remove background from is editable (ot change to an invisible textarea (same yellow background color but without border))
 // 3. drop to different component (every - <li></li>)
 
 const NotesSection = () => {
@@ -34,67 +34,67 @@ const NotesSection = () => {
           <button onClick={() => changeTaskPosition(1)}>
             <FontAwesomeIcon icon={faThumbtack} className="task-pin" />
           </button>
-          <p
-            contentEditable
+          <textarea
+            maxLength={80}
             style={{
               textDecoration: tasks[0].isCompleted ? "line-through" : "none",
             }}
-          ></p>
+          ></textarea>
         </li>
         <li>
           <button onClick={() => changeTaskPosition(2)}>
             <FontAwesomeIcon icon={faThumbtack} className="task-pin" />
           </button>
-          <p
-            contentEditable
+          <textarea
+            maxLength={80}
             style={{
               textDecoration: tasks[1].isCompleted ? "line-through" : "none",
             }}
-          ></p>
+          ></textarea>
         </li>
         <li>
           <button onClick={() => changeTaskPosition(3)}>
             <FontAwesomeIcon icon={faThumbtack} className="task-pin" />
           </button>
-          <p
-            contentEditable
+          <textarea
+            maxLength={80}
             style={{
               textDecoration: tasks[2].isCompleted ? "line-through" : "none",
             }}
-          ></p>
+          ></textarea>
         </li>
         <li>
           <button onClick={() => changeTaskPosition(4)}>
             <FontAwesomeIcon icon={faThumbtack} className="task-pin" />
           </button>
-          <p
-            contentEditable
+          <textarea
+            maxLength={80}
             style={{
               textDecoration: tasks[3].isCompleted ? "line-through" : "none",
             }}
-          ></p>
+          ></textarea>
         </li>
         <li>
           <button onClick={() => changeTaskPosition(5)}>
             <FontAwesomeIcon icon={faThumbtack} className="task-pin" />
           </button>
-          <p
-            contentEditable
+          <textarea
+            maxLength={80}
             style={{
               textDecoration: tasks[4].isCompleted ? "line-through" : "none",
             }}
-          ></p>
+          ></textarea>
         </li>
         <li>
           <button onClick={() => changeTaskPosition(6)}>
             <FontAwesomeIcon icon={faThumbtack} className="task-pin" />
           </button>
-          <p
-            contentEditable
+          <textarea
+            maxLength={80}
             style={{
               textDecoration: tasks[5].isCompleted ? "line-through" : "none",
             }}
-          ></p>
+          ></textarea>
         </li>
       </ul>
     </div>
