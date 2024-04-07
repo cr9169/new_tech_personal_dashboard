@@ -39,7 +39,7 @@
   position: relative;
 }
 .notes-board li:nth-child(5n) {
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   position: relative;
 }
 
@@ -64,7 +64,7 @@
 
 .notes-board li:nth-child(5n):hover {
   box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-  transform: rotate(5deg) scale(1.25);
+  transform: rotate(3deg) scale(1.25);
   z-index: 5;
 }
 
