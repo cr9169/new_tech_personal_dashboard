@@ -12,7 +12,6 @@ const ComponentsSection = () => {
     <div className="components-section-main-box">
       <div className="components-section-content-wrapper">
         <span className="user-name">{text}</span>
-        <span style={{ color: "red" }}></span>
       </div>
     </div>
   );
