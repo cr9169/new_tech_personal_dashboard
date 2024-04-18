@@ -68,15 +68,6 @@
   z-index: 5;
 }
 
-.task-pin {
-  height: 1rem;
-  aspect-ratio: 1;
-  position: absolute;
-  color: #d93e17;
-  left: 1rem;
-  top: 1rem;
-}
-
 .notes-board textarea {
   --clr-notes-background: hsl(56, 100%, 90%);
 
