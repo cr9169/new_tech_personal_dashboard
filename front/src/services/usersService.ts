@@ -1,6 +1,6 @@
 import { config } from "../config";
 import axios from "axios";
-import { IUser } from "../interfaces/user";
+import { IUser } from "../interfaces/User";
 
 class UsersService {
   static async createUser(user: IUser) {
